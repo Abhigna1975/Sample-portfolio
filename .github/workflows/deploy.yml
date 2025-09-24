@@ -36,6 +36,15 @@ jobs:
         CI: false
         GENERATE_SOURCEMAP: false
 
+    - name: Fix asset paths
+      run: |
+        # Fix paths in index.html
+        sed -i 's|href="/|href="/Sample-portfolio/|g' build/index.html
+        sed -i 's|src="/|src="/Sample-portfolio/|g' build/index.html
+        # Fix favicon and manifest paths specifically
+        sed -i 's|href="/Sample-portfolio/Sample-portfolio/|href="/Sample-portfolio/|g' build/index.html
+        sed -i 's|src="/Sample-portfolio/Sample-portfolio/|src="/Sample-portfolio/|g' build/index.html
+        
     - name: Add custom domain support
       run: |
         echo "/* /index.html 200" > build/_redirects
