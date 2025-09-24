@@ -665,11 +665,16 @@ const SoftwareEngineerPortfolio = () => {
 
           <div style={styles.heroImage}>
             <div style={styles.profileImageContainer}>
-              <div style={{textAlign: 'center'}}>
-                <User size={120} />
-                <p style={{fontSize: '1.2rem', fontWeight: '600', marginTop: '20px'}}>Your Photo</p>
-                <p style={{fontSize: '1rem', opacity: '0.8'}}>Software Engineer</p>
-              </div>
+              <img 
+                src="/profile.png"
+                alt="Alex Johnson - Software Engineer"
+                style={{
+                  width: '100%',
+                  height: '100%',
+                  objectFit: 'cover',
+                  borderRadius: '24px'
+                }}
+              />
             </div>
             
             <div style={{...styles.floatingCard, ...styles.floatingCard1}}>
@@ -776,76 +781,6 @@ const SoftwareEngineerPortfolio = () => {
           </div>
 
           <div style={styles.projectsGrid}>
-            <div 
-              style={styles.projectCard}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.transform = 'translateY(-8px)';
-                e.currentTarget.style.boxShadow = '0 20px 40px rgba(0, 0, 0, 0.1)';
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.transform = 'translateY(0)';
-                e.currentTarget.style.boxShadow = 'none';
-              }}
-            >
-              <div style={styles.projectHeader}>
-                <h3 style={styles.projectTitle}>E-Commerce Platform</h3>
-              </div>
-              <p style={styles.projectDescription}>
-                Full-stack e-commerce application with user authentication, shopping cart, payment integration, and admin dashboard. Built with modern technologies focusing on performance and user experience.
-              </p>
-              <div style={styles.projectTech}>
-                <span style={styles.techTag}>React</span>
-                <span style={styles.techTag}>Node.js</span>
-                <span style={styles.techTag}>MongoDB</span>
-                <span style={styles.techTag}>Stripe API</span>
-              </div>
-              <div style={styles.projectLinks}>
-                <a href="#" style={styles.projectLink}>
-                  <Github size={16} />
-                  Code
-                </a>
-                <a href="#" style={styles.projectLink}>
-                  <ExternalLink size={16} />
-                  Live Demo
-                </a>
-              </div>
-            </div>
-
-            <div 
-              style={styles.projectCard}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.transform = 'translateY(-8px)';
-                e.currentTarget.style.boxShadow = '0 20px 40px rgba(0, 0, 0, 0.1)';
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.transform = 'translateY(0)';
-                e.currentTarget.style.boxShadow = 'none';
-              }}
-            >
-              <div style={styles.projectHeader}>
-                <h3 style={styles.projectTitle}>Weather Analytics Dashboard</h3>
-              </div>
-              <p style={styles.projectDescription}>
-                Data visualization dashboard that aggregates weather data from multiple APIs, provides interactive charts, forecasting, and location-based weather insights with clean UI.
-              </p>
-              <div style={styles.projectTech}>
-                <span style={styles.techTag}>Python</span>
-                <span style={styles.techTag}>Django</span>
-                <span style={styles.techTag}>Chart.js</span>
-                <span style={styles.techTag}>Weather API</span>
-              </div>
-              <div style={styles.projectLinks}>
-                <a href="#" style={styles.projectLink}>
-                  <Github size={16} />
-                  Code
-                </a>
-                <a href="#" style={styles.projectLink}>
-                  <ExternalLink size={16} />
-                  Live Demo
-                </a>
-              </div>
-            </div>
-
             <div 
               style={styles.projectCard}
               onMouseEnter={(e) => {
