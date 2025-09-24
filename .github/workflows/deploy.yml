@@ -1,4 +1,4 @@
-name: Deploy React App to GitHub Pages
+name: Deploy to GitHub Pages
 
 on:
   push:
@@ -20,35 +20,20 @@ jobs:
       with:
         node-version: '18'
 
-    - name: Clean install dependencies
-      run: |
-        rm -rf node_modules
-        rm -f package-lock.json
-        npm install
+    - name: Install dependencies
+      run: npm install
 
-    - name: Build with explicit homepage
-      run: |
-        # Remove any cached builds
-        rm -rf build/
-        # Build with explicit PUBLIC_URL
-        PUBLIC_URL=/Sample-portfolio npm run build
-      env:
-        CI: false
-        GENERATE_SOURCEMAP: false
+    - name: Build
+      run: npm run build
 
-    - name: Fix asset paths
+    - name: Fix all paths manually
       run: |
-        # Fix paths in index.html
-        sed -i 's|href="/|href="/Sample-portfolio/|g' build/index.html
-        sed -i 's|src="/|src="/Sample-portfolio/|g' build/index.html
-        # Fix favicon and manifest paths specifically
-        sed -i 's|href="/Sample-portfolio/Sample-portfolio/|href="/Sample-portfolio/|g' build/index.html
-        sed -i 's|src="/Sample-portfolio/Sample-portfolio/|src="/Sample-portfolio/|g' build/index.html
-        
-    - name: Add custom domain support
-      run: |
-        echo "/* /index.html 200" > build/_redirects
-        cp build/index.html build/404.html
+        find build -name "*.html" -type f -exec sed -i 's|="/static/|="/Sample-portfolio/static/|g' {} \;
+        find build -name "*.html" -type f -exec sed -i 's|="/favicon.ico"|="/Sample-portfolio/favicon.ico"|g' {} \;
+        find build -name "*.html" -type f -exec sed -i 's|="/logo192.png"|="/Sample-portfolio/logo192.png"|g' {} \;
+        find build -name "*.html" -type f -exec sed -i 's|="/manifest.json"|="/Sample-portfolio/manifest.json"|g' {} \;
+        find build -name "*.js" -type f -exec sed -i 's|"/static/|"/Sample-portfolio/static/|g' {} \;
+        find build -name "*.css" -type f -exec sed -i 's|"/static/|"/Sample-portfolio/static/|g' {} \;
 
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
