@@ -683,13 +683,17 @@ const SoftwareEngineerPortfolio = () => {
             
            
             
-            <div style={{...styles.floatingCard, ...styles.floatingCard2}}>
-              <div style={styles.cardIcon}>
-                <Github size={20} color="white" />
-              </div>
-              <div style={styles.cardTitle}>GitHub</div>
-              <div style={styles.cardValue}>Active Contributor</div>
+            <a 
+            href="https://github.com/Abhigna1975/Sample-portfolio" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            style={{...styles.floatingCard, ...styles.floatingCard2, textDecoration: 'none', color: 'inherit'}}>
+            <div style={styles.cardIcon}>
+            <Github size={20} color="white" />
             </div>
+           <div style={styles.cardTitle}>GitHub</div>
+           <div style={styles.cardValue}>Active Contributor</div>
+            </a>
           </div>
         </div>
       </section>
