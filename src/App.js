@@ -646,7 +646,7 @@ const SoftwareEngineerPortfolio = () => {
     Get In Touch
   </button>
   <a 
-    href="/resume.pdf"
+    href="./resume.pdf"
     download="Abhigna_Resume.pdf"
     target="_blank"
     rel="noopener noreferrer"
@@ -669,7 +669,7 @@ const SoftwareEngineerPortfolio = () => {
           <div style={styles.heroImage}>
           <div style={styles.profileImageContainer}>
           <img 
-            src={`${process.env.PUBLIC_URL}/profile.png`}
+            src="./profile.png"
             alt="Alex Johnson - Software Engineer"
             style={{
              width: '100%',
@@ -1151,7 +1151,7 @@ const SoftwareEngineerPortfolio = () => {
     Get In Touch
   </button>
   <a 
-  href="https://abhigna1975.github.io/Sample-portfolio/resume.pdf"
+  href="./resume.pdf"
   download="Abhigna_Resume.pdf"
   target="_blank"
   rel="noopener noreferrer"
