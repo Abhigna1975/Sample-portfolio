@@ -616,7 +616,7 @@ const SoftwareEngineerPortfolio = () => {
             
             <div style={styles.heroStats}>
               <div style={styles.stat}>
-                <span style={styles.statNumber}>15+</span>
+                <span style={styles.statNumber}>5+</span>
                 <span style={styles.statLabel}>Projects</span>
               </div>
               <div style={styles.stat}>
@@ -630,62 +630,58 @@ const SoftwareEngineerPortfolio = () => {
             </div>
 
             <div style={styles.heroButtons}>
-              <button 
-                style={styles.primaryButton}
-                onClick={() => setShowContactModal(true)}
-                onMouseEnter={(e) => {
-                  e.target.style.transform = 'translateY(-2px)';
-                  e.target.style.boxShadow = '0 8px 30px rgba(59, 130, 246, 0.4)';
-                }}
-                onMouseLeave={(e) => {
-                  e.target.style.transform = 'translateY(0)';
-                  e.target.style.boxShadow = '0 4px 20px rgba(59, 130, 246, 0.3)';
-                }}
-              >
-                <Mail size={20} />
-                Get In Touch
-              </button>
-              <a 
-                href="#"
-                style={styles.secondaryButton}
-                onMouseEnter={(e) => {
-                  e.target.style.borderColor = '#3b82f6';
-                  e.target.style.color = '#3b82f6';
-                }}
-                onMouseLeave={(e) => {
-                  e.target.style.borderColor = '#e5e7eb';
-                  e.target.style.color = '#374151';
-                }}
-              >
-
-                
-                <Download size={20} />
-                Download Resume
-              </a>
-            </div>
-          </div>
+  <button 
+    style={styles.primaryButton}
+    onClick={() => setShowContactModal(true)}
+    onMouseEnter={(e) => {
+      e.target.style.transform = 'translateY(-2px)';
+      e.target.style.boxShadow = '0 8px 30px rgba(59, 130, 246, 0.4)';
+    }}
+    onMouseLeave={(e) => {
+      e.target.style.transform = 'translateY(0)';
+      e.target.style.boxShadow = '0 4px 20px rgba(59, 130, 246, 0.3)';
+    }}
+  >
+    <Mail size={20} />
+    Get In Touch
+  </button>
+  <a 
+    href="/resume.pdf"
+    download="Abhigna_Resume.pdf"
+    target="_blank"
+    rel="noopener noreferrer"
+    style={styles.secondaryButton}
+    onMouseEnter={(e) => {
+      e.target.style.borderColor = '#3b82f6';
+      e.target.style.color = '#3b82f6';
+    }}
+    onMouseLeave={(e) => {
+      e.target.style.borderColor = '#e5e7eb';
+      e.target.style.color = '#374151';
+    }}
+  >
+    <Download size={20} />
+    Download Resume
+  </a>
+</div>
+</div>
 
           <div style={styles.heroImage}>
-            <div style={styles.profileImageContainer}>
-              <img 
-                src="/profile.png"
-                alt="Alex Johnson - Software Engineer"
-                style={{
-                  width: '100%',
-                  height: '100%',
-                  objectFit: 'cover',
-                  borderRadius: '24px'
-                }}
-              />
+          <div style={styles.profileImageContainer}>
+          <img 
+            src={`${process.env.PUBLIC_URL}/profile.png`}
+            alt="Alex Johnson - Software Engineer"
+            style={{
+             width: '100%',
+             height: '100%',
+             objectFit: 'cover',
+             borderRadius: '24px'
+            }}
+            />
             </div>
+
             
-            <div style={{...styles.floatingCard, ...styles.floatingCard1}}>
-              <div style={styles.cardIcon}>
-                <Code size={20} color="white" />
-              </div>
-              <div style={styles.cardTitle}>Clean Code</div>
-              <div style={styles.cardValue}>Best Practices</div>
-            </div>
+           
             
             <div style={{...styles.floatingCard, ...styles.floatingCard2}}>
               <div style={styles.cardIcon}>
@@ -1008,7 +1004,7 @@ const SoftwareEngineerPortfolio = () => {
                       <Users size={24} />
                     </div>
                     <div style={styles.achievementTitle}>Open Source</div>
-                    <div style={styles.achievementDesc}>5+ Contributions</div>
+                    <div style={styles.achievementDesc}>4+ Contributions</div>
                   </div>
                   
                   <div style={styles.achievementCard}>
@@ -1139,37 +1135,40 @@ const SoftwareEngineerPortfolio = () => {
           </p>
           
           <div style={styles.heroButtons}>
-            <button 
-              style={{...styles.primaryButton, background: 'white', color: '#1e293b'}}
-              onClick={() => setShowContactModal(true)}
-              onMouseEnter={(e) => {
-                e.target.style.transform = 'translateY(-2px)';
-                e.target.style.boxShadow = '0 8px 30px rgba(255, 255, 255, 0.3)';
-              }}
-              onMouseLeave={(e) => {
-                e.target.style.transform = 'translateY(0)';
-                e.target.style.boxShadow = '0 4px 20px rgba(255, 255, 255, 0.2)';
-              }}
-            >
-              <Mail size={20} />
-              Get In Touch
-            </button>
-            <a 
-              href="#"
-              style={{...styles.secondaryButton, borderColor: 'rgba(255, 255, 255, 0.3)', color: 'white'}}
-              onMouseEnter={(e) => {
-                e.target.style.borderColor = 'white';
-                e.target.style.background = 'rgba(255, 255, 255, 0.1)';
-              }}
-              onMouseLeave={(e) => {
-                e.target.style.borderColor = 'rgba(255, 255, 255, 0.3)';
-                e.target.style.background = 'transparent';
-              }}
-            >
-              <Download size={20} />
-              View Resume
-            </a>
-          </div>
+  <button 
+    style={{...styles.primaryButton, background: 'white', color: '#1e293b'}}
+    onClick={() => setShowContactModal(true)}
+    onMouseEnter={(e) => {
+      e.target.style.transform = 'translateY(-2px)';
+      e.target.style.boxShadow = '0 8px 30px rgba(255, 255, 255, 0.3)';
+    }}
+    onMouseLeave={(e) => {
+      e.target.style.transform = 'translateY(0)';
+      e.target.style.boxShadow = '0 4px 20px rgba(255, 255, 255, 0.2)';
+    }}
+  >
+    <Mail size={20} />
+    Get In Touch
+  </button>
+  <a 
+    href="/resume.pdf"
+    download="Abhigna_Resume.pdf"
+    target="_blank"
+    rel="noopener noreferrer"
+    style={{...styles.secondaryButton, borderColor: 'rgba(255, 255, 255, 0.3)', color: 'white'}}
+    onMouseEnter={(e) => {
+      e.target.style.borderColor = 'white';
+      e.target.style.background = 'rgba(255, 255, 255, 0.1)';
+    }}
+    onMouseLeave={(e) => {
+      e.target.style.borderColor = 'rgba(255, 255, 255, 0.3)';
+      e.target.style.background = 'transparent';
+    }}
+  >
+    <Download size={20} />
+    Download Resume
+  </a>
+</div>
 
           <div style={styles.contactGrid}>
             <div style={styles.contactCard}>
