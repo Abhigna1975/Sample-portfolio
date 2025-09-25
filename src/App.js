@@ -1151,23 +1151,23 @@ const SoftwareEngineerPortfolio = () => {
     Get In Touch
   </button>
   <a 
-    href="/resume.pdf"
-    download="Abhigna_Resume.pdf"
-    target="_blank"
-    rel="noopener noreferrer"
-    style={{...styles.secondaryButton, borderColor: 'rgba(255, 255, 255, 0.3)', color: 'white'}}
-    onMouseEnter={(e) => {
-      e.target.style.borderColor = 'white';
-      e.target.style.background = 'rgba(255, 255, 255, 0.1)';
-    }}
-    onMouseLeave={(e) => {
-      e.target.style.borderColor = 'rgba(255, 255, 255, 0.3)';
-      e.target.style.background = 'transparent';
-    }}
-  >
-    <Download size={20} />
-    Download Resume
-  </a>
+  href="https://abhigna1975.github.io/Sample-portfolio/resume.pdf"
+  download="Abhigna_Resume.pdf"
+  target="_blank"
+  rel="noopener noreferrer"
+  style={{...styles.secondaryButton, borderColor: 'rgba(255, 255, 255, 0.3)', color: 'white'}}
+  onMouseEnter={(e) => {
+    e.target.style.borderColor = 'white';
+    e.target.style.background = 'rgba(255, 255, 255, 0.1)';
+  }}
+  onMouseLeave={(e) => {
+    e.target.style.borderColor = 'rgba(255, 255, 255, 0.3)';
+    e.target.style.background = 'transparent';
+  }}
+>
+  <Download size={20} />
+  Download Resume
+</a>
 </div>
 
           <div style={styles.contactGrid}>
